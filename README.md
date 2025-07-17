@@ -86,6 +86,18 @@ You've successfully run and modified your React Native App. :partying_face:
 
 If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
+# Frontend Folder Structure
+
+The frontend code is organized under the `src` directory as follows:
+
+- `src/components/` - Reusable UI components (CountryCard, LoadingSpinner, ErrorNotification, etc.)
+- `src/screens/` - App screens (CountrySearchScreen, CountryListScreen, CountryDetailScreen)
+- `src/store/` - Redux Toolkit store and slices
+- `src/navigation/` - React Navigation setup
+- `src/api/` - Axios instance and API functions
+
+This structure keeps the code modular, maintainable, and scalable.
+
 # Learn More
 
 To learn more about React Native, take a look at the following resources:
