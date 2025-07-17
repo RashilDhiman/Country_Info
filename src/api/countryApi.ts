@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api', // Update with your backend URL
+  baseURL: 'http://localhost:5000/api', // Updated to match backend
 });
 
 export const searchCountries = (name: string) =>
