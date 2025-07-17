@@ -10,8 +10,11 @@ router.get('/', async (req, res) => {
   if (!name) {
     return res.status(400).json({ error: 'Country name is required.' });
   }
+  const apiUrl = `${BASE_URL}/name/${encodeURIComponent(name)}`;
+  console.log('Calling API:', apiUrl);
   try {
-    const response = await axios.get(`${BASE_URL}/name/${encodeURIComponent(name)}`);
+    const response = await axios.get(apiUrl);
+    console.log('API Response:', response.data);
     const countries = response.data.map(country => ({
       name: country.name.common,
       flag: country.flags?.png || country.flags?.svg,
@@ -22,6 +25,7 @@ router.get('/', async (req, res) => {
     }));
     res.json(countries);
   } catch (error) {
+    console.error('API Error:', error.message);
     if (error.response && error.response.status === 404) {
       res.status(404).json({ error: 'No countries found.' });
     } else {
@@ -36,8 +40,11 @@ router.get('/:code', async (req, res) => {
   if (!code) {
     return res.status(400).json({ error: 'Country code is required.' });
   }
+  const apiUrl = `${BASE_URL}/alpha/${encodeURIComponent(code)}`;
+  console.log('Calling API:', apiUrl);
   try {
-    const response = await axios.get(`${BASE_URL}/alpha/${encodeURIComponent(code)}`);
+    const response = await axios.get(apiUrl);
+    console.log('API Response:', response.data);
     const country = response.data[0];
     if (!country) {
       return res.status(404).json({ error: 'Country not found.' });
@@ -57,6 +64,7 @@ router.get('/:code', async (req, res) => {
       cca3: country.cca3
     });
   } catch (error) {
+    console.error('API Error:', error.message);
     if (error.response && error.response.status === 404) {
       res.status(404).json({ error: 'Country not found.' });
     } else {
