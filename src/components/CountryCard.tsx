@@ -22,7 +22,7 @@ const CountryCard: React.FC<CountryCardProps> = ({ flagUrl, name, population }) 
 );
 
 const styles = StyleSheet.create({
-  card: { flexDirection: 'row', alignItems: 'center', padding: 12, backgroundColor: '#fff', borderRadius: 8, marginVertical: 6, elevation: 2 },
+  card: { flexDirection: 'row', alignItems: 'center', padding: 12, backgroundColor: '#fff', borderRadius: 8, marginVertical: 6, elevation: 2, width: '100%' },
   flag: { width: 48, height: 32, borderRadius: 4, marginRight: 12 },
   info: { flex: 1 },
   name: { fontWeight: 'bold', fontSize: 16 },
