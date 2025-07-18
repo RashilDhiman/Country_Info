@@ -3,6 +3,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 # Getting Started
 
 > **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+> Update the ip address in the base url and make sure the phone wifi and laptop is in the same network
 
 ## Step 1: Start Metro
 
