@@ -2,7 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
-const BASE_URL = 'https://restcountries.com/v3.1';
+const BASE_URL = 'https://restcountries.com';
 
 // Search countries
 router.get('/', async (req, res) => {
